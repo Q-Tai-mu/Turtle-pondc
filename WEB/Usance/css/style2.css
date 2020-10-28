@@ -1,0 +1,68 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+svg{
+    width: 270px ;
+    align-self: center;
+    justify-self: center;
+    margin-left: 4%;
+    margin-top: 7%;
+}
+
+svg #mujer{
+    animation-duration:1.2s;
+    animation-name: meser;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes meser{
+    from{
+        transform: translateX(0) translateY(0);
+        
+    }
+    to{
+        transform: translateX(12px) translateY(6px);
+    }
+}
+
+svg #columpio{
+    animation-duration: 1.2s;
+    animation-name: cuerdas;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes cuerdas{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(2px);
+    }
+}
+
+svg #hojas-arbol{
+    animation-duration: 3s;
+    animation-name: hojas;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes hojas{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.st0{fill:#3F3D56;}
+	.st1{opacity:0.1;enable-background:new    ;}
+	.st2{fill:#FFB9B9;}
+	.st3{fill:#D0CDE1;}
+	.st4{fill:#2F2E41;}
+	.st5{fill:#0C963A;}
+	.st6{fill:#F2F2F2;}
