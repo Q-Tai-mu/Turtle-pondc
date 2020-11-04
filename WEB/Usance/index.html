@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./css//noKig.css">
     <script type="text/javascript" src="./js/getParameter.js"></script>
     <link rel="stylesheet" href="./afios/myAlert.min.css">
@@ -16,6 +18,15 @@
     <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
     <script src="./view/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="./view/js/xadmin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
     <style>
         body {
             padding: 0;
@@ -50,8 +61,8 @@
         window.onload = () => {
             var userID = getParameter("user_name");
             Max();
-            
-            
+
+
         }
     </script>
 
@@ -88,23 +99,23 @@
                 <div style=" width: auto;height: 55%;">
                     <div style="width: 33.3%;height: 100%;float: left;"></div>
                     <div style=" width: 33.3%;height: 100%;float: left;">
-                        <img src="./images/cloudFun.png">
+                        <img src="./images/cloudFun.png" style="width: 60px;height: 60px;">
                     </div>
                     <div style=" width: 33.3%;height: 100%;float: left;"></div>
                 </div>
                 <div style="width: auto;height: 45%;">
                     <div style="width: auto; height: 40%;">
-                        <div style=" height: 100%; width: 20%; float:left;">
+                        <div style=" height: 100%; width: 15%; float:left;">
 
                         </div>
-                        <div style=" height: 100%; width: 60%; float:left;text-align: center; font-size: 13px;">
+                        <div style=" height: 100%; width: 65%; float:left;text-align: center; font-size: 13px;padding-right: 5px;padding-bottom: 3px;">
                             浮云阁云端空间
                         </div>
                         <div style=" height: 100%; width: 20%; float:left">
                         </div>
                     </div>
                     <div style=" width: auto; height: 60%;">
-                        <div style="width: 70%;padding-left: 30px;padding-top: 7px;">
+                        <div style="width: 80%;padding-left: 30px;padding-top: 7px;">
                             <div class="progress2 progress-moved" style="background-color: #d9e2ff;">
                                 <div class="progress-bar2"></div>
                             </div>
@@ -182,7 +193,7 @@
                     <li>
                         <a href="javascript:;" class="lis">
                             <i class="iconfont left-nav-li" lay-tips="图片"">
-                                <img src="./images/image.png" style="width: 25px; height: 25px;">
+                                <img src=" ./images/image.png" style="width: 25px; height: 25px;">
                             </i>
                             <cite>图片</cite>
                             <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
@@ -203,18 +214,57 @@
         <!-- 右边内容 -->
         <div class="page-content">
             <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
-                <div style="width: 100%;height: 36px;background-color: #ff6659;">
+                <div style="width: 100%;height: 36px;background-color: #f7f7f7;">
+                    <div style="width: 50%;float: left;">
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active"
+                                style="width: 100px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                <input type="checkbox" checked> 新建文件夹
+                            </label>
+                            <label class="btn btn-secondary active"
+                                style="width: 50px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                <input type="checkbox" checked> 下载
+                            </label>
+                            <label class="btn btn-secondary active"
+                                style="width: 50px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                <input type="checkbox" checked> 共享
+                            </label>
+                            <label class="btn btn-secondary active"
+                                style="width: 50px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                <input type="checkbox" checked> 删除
+                            </label>
+                            <label class="btn btn-secondary active"
+                                style="width: 33px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                <input type="checkbox" checked> ...
+                            </label>
+                        </div>
+                    </div>
+                    <div style="width: 50%; float: left;">
+                        <nav class="navbar navbar-light bg-light"
+                            style="padding-top:5px;padding-left: 195px;padding-right: 0px;">
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" style="height: 25px;width: 130px;"
+                                    placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                                    style="height: 24px; width: 26px;text-align: center;padding: 0px;">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                                        <path fill-rule="evenodd"
+                                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </nav>
+                    </div>
 
                 </div>
-                <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
-                    <dl>
-                        <dd data-type="this">关闭当前</dd>
-                        <dd data-type="other">关闭其它</dd>
-                        <dd data-type="all">关闭全部</dd></dl>
-                </div>
+              
                 <div class="layui-tab-content" style="padding-top: 1px;">
                     <div class="layui-tab-item layui-show">
-                        <iframe src='./view/num.html' frameborder="0" scrolling="yes" marginwidth="2" marginheight="2" class="x-iframe"></iframe>
+                        <iframe src='./view/num.html' frameborder="0" scrolling="yes" marginwidth="2" marginheight="2"
+                            class="x-iframe"></iframe>
                     </div>
                 </div>
                 <div id="tab_show"></div>
