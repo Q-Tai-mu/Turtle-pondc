@@ -7,11 +7,12 @@ var BrowserWindow=electron.BrowserWindow//窗口引用
 var mainWindow=null//声明要打开的主窗口
 
 app.on('ready',()=>{
-    mainWindow =new BrowserWindow({width:600,height:400,frame:false,resizable: false,
+    mainWindow =new BrowserWindow({width:700,height:450,frame:false,transparent:true,resizable: false,
       // useContentSize: true,
       // transparent: false,
-       webPreferences: {nodeIntegration: true}})
-    mainWindow.loadFile('WEB/Usance/index.html')//加载html页面
+       webPreferences: {nodeIntegration: true}
+    })
+    mainWindow.loadFile('WEB/Usance/SigninX.html')//加载html页面
     mainWindow.on('closed',()=>{
         mainWindow =null
     })
