@@ -86,7 +86,7 @@
                 </div>
                 <!-- 布局格式 -->
                 <div style="float:left;margin-top: 2px;margin-left: 2px;float: right;margin-right: 3px;">
-                    <button type="button" v-on:click="setCookie('grid','true',1)" class="btn btn-light"
+                    <button type="button"  class="btn btn-light"
                         style="font-size: 15px;width: 30px;height: 25px; padding: 0px; text-align: center;margin-top:0px;margin-bottom: 4px; border-radius:0px;background-color: #ffffff;border-color:#ffffff;">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -234,16 +234,11 @@
 
         },
         mounted: function () {
-            this.setCookie('grid', 'true', 60);
+        
         },
-        // setCookie 存储cookie  
+        
         methods: {
-            setCookie: function (c_name, value, expire) {
-                var date = new Date()
-                date.setSeconds(date.getSeconds() + expire)
-                document.cookie = c_name + "=" + escape(value) + "; expires=" + date.toGMTString()
-                console.log(date)
-            }
+          
         }
     });
 </script>
