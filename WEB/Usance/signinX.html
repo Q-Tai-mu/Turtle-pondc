@@ -11,7 +11,6 @@
         div {
             border-radius: 7px;
         }
-
     </style>
 </head>
 
@@ -43,8 +42,10 @@
                     </div>
                 </div>
             </div>
-            <div style="width: 50%;height: 93%;float: left;border-top-left-radius: 0px;border-top-right-radius: 0px;background-color: #ebf4ff;">
-             <img src="./images/dlbox.svg" style="width:90%;height:90%;padding-top: 20%;padding-left: 10%;">
+            <div
+                style="width: 50%;height: 93%;float: left;border-top-left-radius: 0px;border-top-right-radius: 0px;background-color: #ebf4ff;">
+                <!-- <img src="./images/dlbox.svg" style="width:90%;height:90%;padding-top: 20%;padding-left: 10%;"> -->
+                <iframe src='./view/Tomp.html' frameborder="0" scrolling="yes" height="100%" width="100%"></iframe>
             </div>
             <div style="width: 50%;height: 93%;float: left;border-top-left-radius: 0px;border-top-right-radius: 0px;">
                 <div style="width: 100%;height: 100%;padding-top: 3%;padding-left: 10%;padding-right: 10%;">
@@ -57,18 +58,22 @@
 
                     <div style="width: 100%;height: 30%;">
                         <div style="width: 100%;height: 50%; padding-top: 2%;padding-left: 5%;">
-                            <button class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline" style="width: 240px;">
+                            <button
+                                class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
+                                style="width: 240px;">
                                 <div style="border-radius: 0px;">
                                     <img src="./images/weibo.png" style="height:25px;width: 25px;">
-                                    </div>
+                                </div>
                                 <span class="ml-4">使用微博登录</span>
                             </button>
                         </div>
                         <div style="width: 100%;height:5% ;"></div>
                         <div style="width: 100%;height: 45%; padding-top: 1%;padding-left: 5%;">
-                            <button class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline" style="width: 240px;">
+                            <button
+                                class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
+                                style="width: 240px;">
                                 <div style="border-radius: 0px;">
-                                <img src="./images/weixin.png" style="height:25px;width: 25px;">
+                                    <img src="./images/weixin.png" style="height:25px;width: 25px;">
                                 </div>
                                 <span class="ml-4">使用微信登录</span>
                             </button>
@@ -77,25 +82,50 @@
 
                     <div style="width: 100%;height: 52%;">
                         <div style="padding-left: 20%;">
-                            <div style="border-radius: 0px;" class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">或者使用电子邮箱注册</div>
+                            <div style="border-radius: 0px;"
+                                class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
+                                或者使用电子邮箱注册</div>
                         </div>
                         <div style="padding-top: 4%;padding-left: 5%;">
-                                <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="email" placeholder="电子邮箱"  style="width: 240px;">
+                            <input
+                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                type="email" placeholder="电子邮箱" style="width: 240px;">
                         </div>
                         <div style="padding-top: 4%;padding-left: 5%;">
-                            <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="password" placeholder="密码" style="width: 240px;">    
-                         </div>
-                         <div style="padding-top: 2%;padding-left: 5%;height: 50px;">
-                            <button class=" tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-3 rounded-lg hover:bg-indigo-700 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none" style="width: 240px;">
-                                <span class="ml-3">注 册</span>
+                            <input
+                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                type="password" placeholder="密码" style="width: 240px;">
+                        </div>
+                        <div style="padding-top: 2%;padding-left: 5%;height: 50px;">
+                            <button
+                                class=" tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-3 rounded-lg hover:bg-indigo-700 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                                style="width: 240px;" onclick="load()">
+                                <span class="ml-3">登 录</span>
                             </button>
-                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    const ipcRenderer = require('electron').ipcRenderer
+
+    function minWindow() {
+        ipcRenderer.send('minWindow')
+    }
+
+    function closeWindow() {
+        ipcRenderer.send('closeWindow')
+    }
+
+    function load(email, password) {
+
+        window.location.href = "indexX.html";
+    }
+</script>
 
 </html>
 <!-- 

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn azure</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css//noKig.css">
+    <script type="text/javascript" src="./js/getParameter.js"></script>
+    <link rel="stylesheet" href="./afios/myAlert.min.css">
+    <script src="./afios/jquery-1.10.2.js"></script>
+    <script src="./afios/jquery.min.js"></script>
+    <link rel="stylesheet" href="./Longin/style.css">
+    <script type="text/javascript" src="./afios/myAlert.min.js"></script>
+    <link rel="stylesheet" href="./view/css/font.css">
+    <link rel="stylesheet" href="./view/css/xadmin.css">
+    <script src="./view/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./view/js/xadmin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <style>
+        div {
+            border-radius: 7px;
+        }
+
+        body {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        .lis {
+            border-top-right-radius: 8px;
+            border-top-left-radius: 14px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 14px;
+        }
+    </style>
+    <script>
+        const ipcRenderer = require('electron').ipcRenderer
+
+        function minWindow() {
+            ipcRenderer.send('minWindow')
+        }
+
+        function closeWindow() {
+            ipcRenderer.send('closeWindow')
+        }
+
+        function Max() {
+            ipcRenderer.send('Max')
+        }
+    </script>
+    <script>
+        window.onload = () => {
+            Max();
+        }
+    </script>
+</head>
+
+<body>
+    <div style="width: 100%;height: 100%;background-color: #fbfbfb;">
+        <div style="width: 100%;height: 600px;">
+            <!-- 标题栏 -->
+            <div style="background-color: #ffffff;width: 100%;height: 5%;">
+                <!-- eef0ef -->
+                <div style="border: 2px;background-color: #eef0ef;height: 30px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 7px;border-top-right-radius: 7px;"
+                    class="ngpms">
+                    <div style="float: left;margin-top: 9px;margin-left: 13px;" class="cer">
+                        <div style="float: left; border-radius: 50%;background-color: #ff6659;border: 1px;width:11px;height: 11px;"
+                            onmouseover="Open(1)" onmouseout="ClOa(1)" onclick="closeWindow()">
+                            <img style="height: 3px;width: 3px;text-align: center;margin-left:1px ;margin-bottom: 8px;"
+                                src="" id="imag1"></div>
+                        <div style="float: left; border-radius: 50%;background-color: #ffbf37;border: 1px;width: 11px;height: 11px;margin-left: 7px;"
+                            onmouseover="Open(2)" onmouseout="ClOa(2)"
+                            onclick="$.myToast(&#39;申请测试资格，请联系邮箱：《QinTaiMu@outlook.com》&#39;)">
+                            <img style="height: 3px;width: 3px;text-align: center;margin-left:1px ;margin-bottom: 8px;"
+                                src="" id="imag2">
+                        </div>
+                        <div style="float: right; border-radius: 50%;background-color: #b5c5c4;border: 1px;width: 11px;height: 11px;margin-left: 7px;"
+                            onmouseover="Open(3)" onmouseout="ClOa(3)" onclick="minWindow()">
+                            <img style="height: 3px;width: 3px;text-align: center;margin-left:1px ;margin-bottom: 8px;"
+                                src="" id="imag3"></div>
+                    </div>
+                    <div style="float: right;margin-top: 2px;margin-right: 27px;font-size: 20px;color: #464d5f;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- 内容区 -->
+            <div>
+                <div class="left-nav" style="width: 235px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;">
+                    <div style=" width: auto; height: 114px;padding-bottom: 8px;">
+                        <div style=" width: auto;height: 55%;">
+                            <div style="width: 33.3%;height: 100%;float: left;"></div>
+                            <div style=" width: 33.3%;height: 100%;float: left;">
+                                <img src="./images/cloudFun.png" style="width: 60px;height: 60px;">
+                            </div>
+                            <div style=" width: 33.3%;height: 100%;float: left;"></div>
+                        </div>
+                        <div style="width: auto;height: 45%;">
+                            <div style="width: auto; height: 40%;">
+                                <div style=" height: 100%; width: 15%; float:left;">
+
+                                </div>
+                                <div
+                                    style=" height: 100%; width: 65%; float:left;text-align: center; font-size: 13px;padding-right: 5px;padding-bottom: 3px;">
+                                    Dawn azure
+                                </div>
+                                <div style=" height: 100%; width: 20%; float:left">
+                                </div>
+                            </div>
+                            <!-- 存储进度条 -->
+                            <div style=" width: auto; height: 60%;">
+                                <div style="width: 80%;padding-left: 30px;padding-top: 7px;">
+                                    <div class="progress2 progress-moved" style="background-color: #d9e2ff;">
+                                        <div class="progress-bar2"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="side-nav">
+                        <ul id="nav">
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="个人信息">
+                                        <img src="./images/user.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>个人信息</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">
+                                        &#xe602;
+                                    </i></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="文档">
+                                        <img src="./images/document.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>文档</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis active" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="中央文件中心">
+                                        <img src="./images/zhoyan.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>中央文件中心</cite>
+                                    <i class="iconfont nav_right " style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="视频">
+                                        <img src="./images/dveo.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>视频</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="音乐">
+                                        <img src="./images/misc.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>音乐</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="离线">
+                                        <img src="./images/lix.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>离线</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="标记">
+                                        <img src="./images/biaoji.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>标记</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="图片"">
+                                        <img src=" ./images/image.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>图片</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="lis" style="text-decoration:none;">
+                                    <i class="iconfont left-nav-li" lay-tips="回收站">
+                                        <img src="./images/huso.png" style="width: 25px; height: 25px;">
+                                    </i>
+                                    <cite>回收站</cite>
+                                    <i class="iconfont nav_right" style="padding-top: 6px;">&#xe602;</i></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+              <!-- 右边内容 -->
+            <div class="page-content">
+                <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+                    <div style="width: 100%;height: 36px;background-color: #f7f7f7;">
+                        <div style="width: 50%;float: left;">
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active"
+                                    style="width: 100px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                    <input type="checkbox" checked> 新建文件夹
+                                </label>
+                                <label class="btn btn-secondary active"
+                                    style="width: 50px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                    <input type="checkbox" checked> 下载
+                                </label>
+                                <label class="btn btn-secondary active"
+                                    style="width: 50px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                    <input type="checkbox" checked> 共享
+                                </label>
+                                <label class="btn btn-secondary active"
+                                    style="width: 50px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                    <input type="checkbox" checked> 删除
+                                </label>
+                                <label class="btn btn-secondary active"
+                                    style="width: 33px;height: 25px;font-size: 10px;margin-top: 4px;margin-left: 3px;">
+                                    <input type="checkbox" checked> ...
+                                </label>
+                            </div>
+                        </div>
+                        <div style="width: 50%; float: left;">
+                            <nav class="navbar navbar-light bg-light"
+                                style="padding-top:5px;padding-left: 195px;padding-right: 0px;">
+                                <form class="form-inline">
+                                    <input class="form-control mr-sm-2" type="search" style="height: 25px;width: 130px;"
+                                        placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                                        style="height: 24px; width: 26px;text-align: center;padding: 0px;">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                                            <path fill-rule="evenodd"
+                                                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                        </svg>
+                                    </button>
+                                </form>
+                            </nav>
+                        </div>
+    
+                    </div>
+    
+                    <div class="layui-tab-content" style="padding-top: 1px; height:533px;">
+                        <div class="layui-tab-item layui-show">
+                            <iframe src='./view/num.html' frameborder="0" scrolling="yes" height="533px"
+                                class="x-iframe"></iframe>
+                        </div>
+                    </div>
+                    <div id="tab_show"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
